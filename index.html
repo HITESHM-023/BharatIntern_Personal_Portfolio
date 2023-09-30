@@ -1,0 +1,477 @@
+
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+									<!-- PERSONAL PORTFOLIO -->
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Portfolio</title>
+
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+									<!-- CSS STYLES -->
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <style>
+    /* Reset some default styles */
+    body, h1, h2, h3, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Basic Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth; /* Enable smooth scrolling */
+      background-color: #051936 ; /* Grey background for body */
+    }
+
+    /* Header Navigation */
+    header {
+      background-color: #1F4683; /* Orange background color for header */
+      color: #fff;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1;
+      transition: background-color 0.5s;
+    }
+
+    header.scrolled {
+      background-color: #FF8C42; /* Lighter orange background on scroll */
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #FFC300; /* Yellow color on hover */
+    }
+
+    /* Section Styles */
+    .section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transition: background-color 0.5s; /* Smooth transition for background color */
+      background-color: #f0f0f0; /* Grey background for sections */
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+      color: #fff; /* White text color for sections */
+      
+    }
+
+/* Apply the animation to the body */
+body {
+  animation: fade-in-background 3s ease-in-out 1; /* Run the background animation only once */
+}
+
+/* Keyframe animation for fading in the background from transparent to semi-transparent black */
+@keyframes fade-in-background {
+  0% {
+    background-color: rgba(0, 0, 0, 0); /* Start with transparent background */
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.7); /* End with semi-transparent black background */
+  }
+}
+
+    .skills-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill-name {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .progress {
+      width: 10cm; /* Set the desired length in centimeters */
+      height: 20px;
+      background-color: #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-value {
+      height: 100%;
+      width: 0; /* Start with 0 width */
+      background-color: #007BFF;
+      border-radius: 4px;
+      animation: increaseWidth 2s ease-in-out forwards; /* Use forwards to keep the final width */
+    }
+
+    /* Keyframe animation for increasing the width of progress bars */
+    @keyframes increaseWidth {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: var(--percentage);
+      }
+    }
+
+
+
+    /* Intro section background and text styles */
+    #intro {
+      background-image: url('https://imgs.search.brave.com/3POWr6Qvh4N_1p_zU6jY7jWF0YxWFGecvFS-H8cPbOg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM4LmFscGhhY29k/ZXJzLmNvbS81NTkv/NTU5MTI4LmpwZw'); /* Background image */
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      padding: 100px 0;
+    }
+
+    /* Text on intro section */
+    #intro h2 {
+      font-size: 36px;
+    }
+
+    /* Transition bar */
+    .transition-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #FF5733; /* Orange color */
+      z-index: 2;
+      transition: width 0.5s;
+    }
+
+         body {
+            font-family: Arial, sans-serif;
+        }
+
+        .section {
+            background-color: black;
+            padding: 40px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left; /* Set text alignment to left */
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .contact-icons {
+            display: flex;
+            justify-content: space-between;
+            max-width: 200px;
+            margin-top: 20px;
+        }
+
+        .contact-icon {
+            font-size: 24px;
+            color: #007BFF;
+            cursor: pointer;
+        }
+   </style>
+
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+									   <!-- HTML BODY -->
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+
+
+</head>
+<body bgcolor="#051936">
+  <div class="transition-bar"></div> <!-- Add the transition bar -->
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+
+
+  <section id="intro" class="section">
+    <div class="container">
+      <h2>WELCOME TO HITESH'S PORTFOLIO</h2> <!-- Add the welcome text -->
+    </div>
+  </section>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+        <p>
+             As a Data Science student and dedicated practitioner of Artificial Intelligence, I have a strong enthusiasm for applying cutting-edge technologies to tackle complex business challenges. Currently, I am in my second year of pursuing a B.E. in Artificial Intelligence and Data Science at Nitte Meenakshi Institute of Technology. My career aspiration is to secure a challenging position within the IT industry where I can contribute to the organization's growth while fostering a positive work environment.
+<br><br>
+In terms of technical proficiency, I am proficient in programming languages such as C, C++, and Python, and I possess experience working with databases like SQL and MySQL. Additionally, I have a foundational knowledge of web design using HTML and am well-versed in operating systems like Windows 10 and Ubuntu. Regarding soft skills, I excel in teamwork, time management, critical thinking, and problem-solving.
+
+On a personal note, my birthdate is October 1, 2002, and I am an Indian national with proficiency in English, Hindi, Kannada, and Telugu. My hobbies include martial arts and volleyball, which underscore my active and physically-oriented interests.
+<br><br>
+In summary, I am a motivated and technically proficient student who is passionately pursuing a career in the IT industry. My academic foundation is robust, and I am deeply committed to personal growth and contributing to the success of any organization I join.
+ </p>
+       </div>
+    </section>
+
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+
+
+<section id="skills" class="section">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <span class="skill-name">C</span>
+        <div class="progress">
+          <div class="progress-value" style="--percentage: 65%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span class="skill-name">C++</span>
+        <div class="progress">
+          <div class="progress-value" style="--percentage: 65%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span class="skill-name">Python</span>
+        <div class="progress">
+          <div class="progress-value" style="--percentage: 85%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span class="skill-name">HTML/CSS</span>
+        <div class="progress">
+          <div class="progress-value" style="--percentage: 80%;"></div>
+        </div>
+      </div>
+        <div class="skill">
+        <span class="skill-name">JavaScript</span>
+        <div class="progress">
+          <div class="progress-value" style="--percentage: 50%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+
+
+  <section id="achievements" class="section">
+    <div class="container">
+      <h2>Achievements</h2>
+  <p>
+    <strong>Participation in the National Level NCC Camp (All India Vayu Sainik Camp 2022):</strong><br>
+    In 2022, I had the distinct honor of participating in the National Level NCC Camp, known as the All India Vayu Sainik Camp. This camp brought together young individuals from all over India. I represented the Karnataka and Goa Directorate, showcasing not only my commitment to the NCC but also my leadership and teamwork skills. During this camp, I underwent rigorous training and engaged in activities that promoted fitness and character building.
+</p> <br>
+<p>
+    <strong>Competed in the Inter State Volleyball Competition representing Kensri School:</strong><br>
+    My passion for sports led me to compete in the Inter State Volleyball Competition, where I represented Kensri School. This competition tested my athletic abilities, sportsmanship, and the trust placed in me by my school. It involved training, teamwork, and competing against skilled athletes from different states, which broadened my horizons and strengthened my competitive spirit.
+</p> <br>
+<p>
+    <strong>Currently serving as the Cadet Senior Under Officer of 1 Karnataka Air Squadron NCC:</strong><br>
+    As the Cadet Senior Under Officer of 1 Karnataka Air Squadron NCC, I hold a position of responsibility and leadership. In this role, I guide and mentor other cadets, ensure the smooth functioning of our squadron, and uphold the values of the NCC. This position has allowed me to develop leadership, communication, and organizational skills, along with a deep commitment to service and duty.
+</p>
+
+    </div>
+  </section>
+
+
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+
+
+   <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-box">
+                <h3 class="project-title"><a href="https://github.com/HITESHM-023/SPEECH_EMOTION_RECOGNITION">1. Speech Emotion Recognition</a></h3>
+                <p>
+                    Speech Emotion Recognition focuses on analyzing and classifying human emotions from speech data. It identifies emotions such as happiness, sadness, anger, etc., from spoken words. Applications include mental health assessment and human-computer interaction.
+                </p><br>
+            </div>
+            <div class="project-box">
+                <h3 class="project-title"><a href="https://github.com/HITESHM-023/Loan_Prediction_Model">2. Loan Prediction Model</a></h3>
+                <p>
+                    The Loan Prediction Model assists in predicting loan approval. It analyzes applicant data and automates the loan approval process, making lending decisions efficient and accurate.
+                </p><br>
+            </div>
+            <div class="project-box">
+                <h3 class="project-title"><a href="https://github.com/HITESHM-023/Bharat_Intern">3. Netflix/Amazon Prime Homepage Clone</a></h3>
+                <p>
+                    The Netflix/Amazon Prime Homepage Clone recreates the user interface of popular streaming platforms. It provides a user-friendly interface for browsing movies and TV shows.
+                </p><br>
+            </div>
+            <div class="project-box">
+                <h3 class="project-title"><a href="https://github.com/HITESHM-023/Bharat_Intern">4. Temperature Converter</a></h3>
+                <p>
+                    The Temperature Converter tool converts temperatures between units like Celsius, Fahrenheit, and Kelvin, making it useful in daily life and education.
+                </p><br>
+            </div>
+            <div class="project-box">
+                <h3 class="project-title"><a href="https://github.com/HITESHM-023/Skill_Intern">5. Personal Portfolio Webpage</a></h3>
+                <p>
+                    The Personal Portfolio Webpage showcases skills, projects, and resume. It's an online portfolio for sharing achievements and experiences with potential employers or clients.
+                </p>
+            </div>
+        </div>
+    </section>
+<body>
+
+
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+
+
+
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out to me through the following platforms:</p>
+    <div class="contact-icons">
+      <a href="https://github.com/HITESHM-023" target="_blank" class="contact-icon">
+        <i class="fab fa-github"></i> <!-- GitHub icon -->
+      </a>
+      <a href="https://www.linkedin.com/in/hitesh-m-255289278" target="_blank" class="contact-icon">
+        <i class="fab fa-linkedin"></i> <!-- LinkedIn icon -->
+      </a>
+      <a href="https://instagram.com/hiteshm.17?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" class="contact-icon">
+        <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+      </a>
+      <a href="mailto:1nt21ad023.hitesh@nmit.ac.in" class="contact-icon">
+        <i class="far fa-envelope"></i> <!-- Gmail icon -->
+      </a>
+      <a href="https://drive.google.com/file/d/18yLmekSzsk4gim2JjK2IThFPvnqDJfle/view?usp=drive_link" target="_blank" class="contact-icon">
+        <i class="far fa-file-pdf"></i> <!-- Resume icon -->
+      </a>
+    </div>
+  </div>
+</section>
+</body>
+
+
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+									  <!-- JAVASCRIPT -->
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+
+
+<script>
+    // Smooth scrolling with transition bar
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const targetOffset = targetElement.offsetTop;
+          const currentOffset = window.pageYOffset;
+          const distance = targetOffset - currentOffset;
+          const duration = 500; // Adjust the duration as needed
+
+          let start = null;
+
+          function step(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+
+            window.scrollTo(0, easeInOutQuad(progress, currentOffset, distance, duration));
+
+            if (progress < duration) {
+              requestAnimationFrame(step);
+            }
+          }
+
+          requestAnimationFrame(step);
+
+          // Update the transition bar
+          const transitionBar = document.querySelector('.transition-bar');
+          transitionBar.style.width = '100%';
+
+          setTimeout(() => {
+            transitionBar.style.width = '0';
+          }, duration);
+        }
+      });
+    });
+
+    // Easing function for smooth scrolling
+    function easeInOutQuad(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+  </script>
+
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+
+
+</body>
+</html>
+
+
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+<!-- --------------------------x---------------------------------------------------------x--------------------------------------------------x-----------------------------------------------x---- -->
+
